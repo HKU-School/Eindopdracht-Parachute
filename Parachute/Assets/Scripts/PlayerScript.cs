@@ -8,7 +8,8 @@ public class PlayerScript : MonoBehaviour
 {
     [SerializeField] private float _playerSpeed = 3f;
     private Rigidbody2D _rb;
-    private float _horizonMove;
+    private Vector2 _moveInput;
+    private bool _isPaused = false; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,16 +21,32 @@ public class PlayerScript : MonoBehaviour
     {
         // Checke why horizonMove
         Debug.Log("Move is pressed");
+        _moveInput = context.ReadValue<Vector2>();
     }
     public void Pause(InputAction.CallbackContext context)
     {
         // Action for pause game add later. 
         Debug.Log("Pause is pressed");
+        PauseGame();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        _rb.linearVelocity = new Vector2(_moveInput.x * _playerSpeed, _rb.linearVelocity.y);
+    }
+
+    private void PauseGame()
+    {
+        if (_isPaused == false)
+        {
+            Time.timeScale = 0;
+            _isPaused = true;
+        }
+        else if (_isPaused == true) 
+        {
+            Time.timeScale = 1;
+            _isPaused = false;
+        }
     }
 }
