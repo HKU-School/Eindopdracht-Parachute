@@ -3,43 +3,43 @@ using UnityEngine;
 
 public class ParachutistenScript : MonoBehaviour
 {
-    private float _pSpeed;
-    private Vector2 _dir;
-    private Rigidbody2D _rb;
+    private float pSpeed;
+    private Vector2 dir;
+    private Rigidbody2D rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
 
-        _pSpeed = Random.Range(3f, 6f);
-        _dir = new Vector2(Random.Range(-1f, 1f), -1f);
+        pSpeed = Random.Range(3f, 6f);
+        dir = new Vector2(Random.Range(-1f, 1f), -1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        _rb.linearVelocity = _dir * _pSpeed;
+        rb.linearVelocity = dir * pSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Ground"))
         {
-            Debug.Log("Playere detectid");
+            Debug.Log("Playere detectid or Ground");
             Destroy(gameObject);
         }
 
-        if(other.CompareTag("Wall"))
+        if (other.CompareTag("Wall"))
         {
             Debug.Log("touch wall");
-            if(_dir.x < 0f)
+            if(dir.x < 0f)
             {
-                _dir.x = 1f;
+                dir.x = 1f;
             }
-            else if (_dir.x > 0f)
+            else if (dir.x > 0f)
             {
-                _dir.x = -1f;
+                dir.x = -1f;
             }
         }
     }
