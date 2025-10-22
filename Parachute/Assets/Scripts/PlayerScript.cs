@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,7 +7,10 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private float playerSpeed = 3f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    
+
+    //// Pause game
+    //private bool isPaused = false;
+    //[SerializeField] private GameObject pauseMenu;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,7 +29,8 @@ public class PlayerScript : MonoBehaviour
     {
         // Action for pause game add later. 
         Debug.Log("Pause is pressed");
-        GameManager.Instance.PauseGame();
+        //PauseGame();
+        GameManager.instance.PauseGame();
     }
 
     // Update is called once per frame
@@ -40,8 +43,22 @@ public class PlayerScript : MonoBehaviour
     {
         if (other.CompareTag("Parachutisten"))
         {
-            GameManager.Instance.AddPoint();
+            GameManager.instance.AddPoint();
         }
     }
-
+    //public void PauseGame()
+    //{
+    //    if (isPaused == false)
+    //    {
+    //        Time.timeScale = 0;
+    //        isPaused = true;
+    //        pauseMenu.SetActive(true);
+    //    }
+    //    else if (isPaused == true)
+    //    {
+    //        Time.timeScale = 1;
+    //        isPaused = false;
+    //        pauseMenu.SetActive(false);
+    //    }
+    //}
 }

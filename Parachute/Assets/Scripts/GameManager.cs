@@ -1,31 +1,21 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager instance;
+
+    // Pause game
+    private bool isPaused = false;
+    [SerializeField] private GameObject pauseMenu;
 
     // Point system 
     private TMP_Text scoreText;
     private int points = 0;
 
-    // Pause game
-    private bool isPaused = false;
-    private GameObject pauseMenu;
-
-
     private void Awake()
     {
-        if(Instance == null)
-        {
-            DontDestroyOnLoad(gameObject);
-            Instance = this;
-        }
-        else if (Instance != this)
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,10 +24,6 @@ public class GameManager : MonoBehaviour
         // Find text and use text
         GameObject textScore = GameObject.Find("Text Score");
         scoreText = textScore.GetComponent<TMP_Text>();
-        // Find Pause menu
-        GameObject menu = GameObject.Find("PauseMenu");
-        pauseMenu = menu;
-        pauseMenu.SetActive(false);
     }
     
     // Update is called once per frame
@@ -54,7 +40,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + points;
     }
 
-    // Pause game open UI
+
     public void PauseGame()
     {
         if (isPaused == false)
@@ -70,4 +56,5 @@ public class GameManager : MonoBehaviour
             pauseMenu.SetActive(false);
         }
     }
+
 }
