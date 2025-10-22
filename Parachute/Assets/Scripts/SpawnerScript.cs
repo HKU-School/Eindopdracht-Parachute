@@ -14,12 +14,6 @@ public class SpawnerScript : MonoBehaviour
        StartCoroutine(SpawnLoop());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //StartCoroutine(SpawnLoop());
-    }
-
     private IEnumerator SpawnLoop ()
     {
         yield return new WaitForSeconds(5f);
@@ -27,7 +21,6 @@ public class SpawnerScript : MonoBehaviour
         while (true)
         {
             yield return new WaitForEndOfFrame();
-            // iets van variable maken had docent gezecht kijk even
             unitlSpawn -= Time.deltaTime;
 
             if (unitlSpawn <= 0)
@@ -38,16 +31,15 @@ public class SpawnerScript : MonoBehaviour
                     yield return new WaitForSeconds(1f);
                 }
 
-                //reset cooldown
+                // Reset cooldown
                 unitlSpawn = coolDown;
-
-                //yield return new WaitForSeconds(_coolDown);
             }
         }
 
         
     }
 
+    // Spawns the parachuts in ranom postions.
     private void SpawnParachuts()
     {
         GameObject pSpawn = parachuts[Random.Range(0, parachuts.Count)]; 

@@ -26,13 +26,6 @@ public class GameManager : MonoBehaviour
         scoreText = textScore.GetComponent<TMP_Text>();
     }
     
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    
     // Add point
     public void AddPoint()
     {
@@ -40,7 +33,7 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + points;
     }
 
-
+    // Pause menu
     public void PauseGame()
     {
         if (isPaused == false)
