@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    private MenuScript menuScript;
+
     // Pause game
     private bool isPaused = false;
     [SerializeField] private GameObject pauseMenu;
@@ -12,10 +14,19 @@ public class GameManager : MonoBehaviour
     // Point system 
     private TMP_Text scoreText;
     private int points = 0;
+    [SerializeField] int maxPoints = 15;
+    [SerializeField] int minesPoints = 1;
+
+    private int dogPoints;
+    [SerializeField] int maxDogPoints = 3;
+    
 
     private void Awake()
     {
         instance = this;
+
+        // Get the menu script.
+        menuScript = GetComponent<MenuScript>();
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,12 +36,35 @@ public class GameManager : MonoBehaviour
         GameObject textScore = GameObject.Find("Text Score");
         scoreText = textScore.GetComponent<TMP_Text>();
     }
-    
+
     // Add point
     public void AddPoint()
     {
         points = points + 1;
         scoreText.text = "Score: " + points;
+
+        // When max points reach you win
+        if (points >= maxPoints)
+        {
+            menuScript.Win();
+        }
+    }
+
+    // Remove point 
+    public void RemovePoint()
+    {
+        // Add dog cach if you have the max you loose the game.
+        dogPoints = dogPoints + 1;
+        if (dogPoints >= maxDogPoints)
+        {
+            menuScript.Loose();
+        }
+        // remove points 
+        if (points > 0)
+        {
+            points = points - minesPoints;
+            scoreText.text = "Score: " + points;
+        }
     }
 
     // Pause menu

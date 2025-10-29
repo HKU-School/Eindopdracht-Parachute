@@ -27,4 +27,12 @@ public class MenuScript : MonoBehaviour
     {
         GameManager.instance.PauseGame();
     }
+    public void Win()
+    {
+       SceneManager.LoadScene("Win");
+    }
+    public void Loose()
+    {
+        SceneManager.LoadScene("Loose");
+    }
 }

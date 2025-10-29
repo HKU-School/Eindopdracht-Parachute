@@ -4,6 +4,8 @@ using UnityEngine;
 public class ParachutistenScript : MonoBehaviour
 {
     private float pSpeed;
+    [SerializeField] private float minSpeed = 3f;
+    [SerializeField] private float maxSpeed = 6f;
     private Vector2 dir;
     private Rigidbody2D rb;
 
@@ -12,7 +14,7 @@ public class ParachutistenScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
-        pSpeed = Random.Range(3f, 6f);
+        pSpeed = Random.Range(minSpeed, maxSpeed);
         dir = new Vector2(Random.Range(-1f, 1f), -1f);
     }
 
@@ -26,7 +28,6 @@ public class ParachutistenScript : MonoBehaviour
     {
         if (other.CompareTag("Player") || other.CompareTag("Ground"))
         {
-            Debug.Log("Playere detectid or Ground");
             Destroy(gameObject);
         }
 

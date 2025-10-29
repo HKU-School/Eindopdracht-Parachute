@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d36d4cd38fc264c4a9f0117d105c73df
+guid: 5a14acd3b63a4174c8cc932f0976c394
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1315756795244337306
-    second: german-shephard-run-003_0
+      213: -3073603711817343361
+    second: PiwwowPlayer_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: german-shephard-run-003_0
+      name: PiwwowPlayer_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 44
-        width: 125
-        height: 80
+        x: 2
+        y: 0
+        width: 198
+        height: 98
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a98585785d1824210800000000000000
-      internalID: 1315756795244337306
+      spriteID: f7e1ec075bd5855d0800000000000000
+      internalID: -3073603711817343361
       vertices: []
       indices: 
       edges: []
@@ -126,7 +126,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      german-shephard-run-003_0: 1315756795244337306
+      PiwwowPlayer_0: -3073603711817343361
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

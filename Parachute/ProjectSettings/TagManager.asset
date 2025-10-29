@@ -7,6 +7,7 @@ TagManager:
   - Parachutisten
   - Wall
   - Ground
+  - Dog
   layers:
   - Default
   - TransparentFX

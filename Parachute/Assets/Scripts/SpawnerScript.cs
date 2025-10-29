@@ -7,7 +7,8 @@ public class SpawnerScript : MonoBehaviour
     [SerializeField] private List<GameObject> parachuts = new List<GameObject>();
     [SerializeField] private float coolDown = 5;
     private float unitlSpawn = 0;
-
+     
+    
 
     private void Start()
     {
@@ -17,7 +18,7 @@ public class SpawnerScript : MonoBehaviour
     private IEnumerator SpawnLoop ()
     {
         yield return new WaitForSeconds(5f);
-
+        
         while (true)
         {
             yield return new WaitForEndOfFrame();

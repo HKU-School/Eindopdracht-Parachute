@@ -34,11 +34,16 @@ public class PlayerScript : MonoBehaviour
         rb.linearVelocity = new Vector2(moveInput.x * playerSpeed, rb.linearVelocity.y);
     }
 
+    // Checking for points. 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Parachutisten"))
         {
             GameManager.instance.AddPoint();
+        }
+        if (other.CompareTag("Dog"))
+        {
+            GameManager.instance.RemovePoint();
         }
     }
 }
