@@ -18,6 +18,10 @@ public class MenuScript : MonoBehaviour
         GameManager.instance.PauseGame();
         SceneManager.LoadScene("MainMenu");
     }
+    public void Home2()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     public void Quit()
     {
         Debug.Log("Quit Game");

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 
     // Point system 
     private TMP_Text scoreText;
-    private int points = 0;
+    public int points = 0;
     [SerializeField] int maxPoints = 15;
     [SerializeField] int minesPoints = 1;
 
@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        DontDestroyOnLoad(gameObject);
 
         // Get the menu script.
         menuScript = GetComponent<MenuScript>();
@@ -51,7 +52,7 @@ public class GameManager : MonoBehaviour
     }
 
     // Remove point 
-    public void RemovePoint()
+    public void DogPoint()
     {
         // Add dog cach if you have the max you loose the game.
         dogPoints = dogPoints + 1;
@@ -60,6 +61,14 @@ public class GameManager : MonoBehaviour
             menuScript.Loose();
         }
         // remove points 
+        if (points > 0)
+        {
+            points = points - minesPoints;
+            scoreText.text = "Score: " + points;
+        }
+    }
+    public void RemovePoint()
+    { 
         if (points > 0)
         {
             points = points - minesPoints;

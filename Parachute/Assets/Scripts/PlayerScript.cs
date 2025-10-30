@@ -43,7 +43,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (other.CompareTag("Dog"))
         {
-            GameManager.instance.RemovePoint();
+            GameManager.instance.DogPoint();
         }
     }
 }

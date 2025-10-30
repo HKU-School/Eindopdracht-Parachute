@@ -26,7 +26,16 @@ public class ParachutistenScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Ground"))
+        if (other.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+        if (CompareTag("Parachutisten") && other.CompareTag("Ground"))
+        {
+            GameManager.instance.RemovePoint();
+            Destroy(gameObject);
+        }
+        if (other.CompareTag("Ground"))
         {
             Destroy(gameObject);
         }
