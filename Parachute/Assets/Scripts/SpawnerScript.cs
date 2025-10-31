@@ -15,6 +15,7 @@ public class SpawnerScript : MonoBehaviour
        StartCoroutine(SpawnLoop());
     }
 
+    // Coroutine that spawns parachuts after delay 
     private IEnumerator SpawnLoop ()
     {
         yield return new WaitForSeconds(5f);
@@ -36,8 +37,6 @@ public class SpawnerScript : MonoBehaviour
                 unitlSpawn = coolDown;
             }
         }
-
-        
     }
 
     // Spawns the parachuts in ranom postions.

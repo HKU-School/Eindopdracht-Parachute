@@ -7,6 +7,7 @@ public class GameOverScore : MonoBehaviour
 
     void Start()
     {
+        // Stores final score of catch cats
         int endScore = GameManager.instance.points;
         Debug.Log(GameManager.instance.points);
 
@@ -15,10 +16,5 @@ public class GameOverScore : MonoBehaviour
         highText = textScore.GetComponent<TMP_Text>();
 
         highText.text = ": " + endScore;
-    }
-
-    private void Update()
-    {
-        
     }
 }

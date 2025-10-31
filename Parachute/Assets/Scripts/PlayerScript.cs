@@ -16,14 +16,14 @@ public class PlayerScript : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        // Checke why horizonMove
+        // Movement 
         Debug.Log("Move is pressed");
         moveInput = context.ReadValue<Vector2>();
     }
 
     public void Pause(InputAction.CallbackContext context)
     {
-        // Action for pause game add later. 
+        // Action for pause game 
         Debug.Log("Pause is pressed");
         GameManager.instance.PauseGame();
     }

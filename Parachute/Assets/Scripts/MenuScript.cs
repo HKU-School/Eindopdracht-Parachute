@@ -18,6 +18,7 @@ public class MenuScript : MonoBehaviour
         GameManager.instance.PauseGame();
         SceneManager.LoadScene("MainMenu");
     }
+    // Same home page but because of the pause menu I need one to deactivate it
     public void Home2()
     {
         SceneManager.LoadScene("MainMenu");

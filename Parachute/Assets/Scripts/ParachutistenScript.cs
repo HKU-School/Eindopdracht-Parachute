@@ -26,13 +26,15 @@ public class ParachutistenScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Destroy parachuts when touch ground or wall
         if (other.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
         if (CompareTag("Parachutisten") && other.CompareTag("Ground"))
         {
-            GameManager.instance.RemovePoint();
+            // Remove point when good parachutisten touch ground
+            GameManager.instance.RemovePoint(); 
             Destroy(gameObject);
         }
         if (other.CompareTag("Ground"))
@@ -40,6 +42,7 @@ public class ParachutistenScript : MonoBehaviour
             Destroy(gameObject);
         }
 
+        // Turn other diraction when hit wall
         if (other.CompareTag("Wall"))
         {
             Debug.Log("touch wall");

@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
         {
             menuScript.Loose();
         }
-        // remove points 
+        // Remove points 
         if (points > 0)
         {
             points = points - minesPoints;
@@ -69,6 +69,7 @@ public class GameManager : MonoBehaviour
     }
     public void RemovePoint()
     { 
+        // Remove point
         if (points > 0)
         {
             points = points - minesPoints;
