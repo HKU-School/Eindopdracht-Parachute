@@ -5,6 +5,7 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
+        [Header("Player Value")]
         [SerializeField] private float playerSpeed;
 
         private Rigidbody2D _rb;
@@ -18,7 +19,6 @@ namespace Player
 
         public void OnMove(InputAction.CallbackContext context)
         {
-            Debug.Log("Move is pressed");
             _moveInput = context.ReadValue<Vector2>();
         }
 
