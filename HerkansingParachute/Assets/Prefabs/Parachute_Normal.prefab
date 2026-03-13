@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2156956304955251997}
   - component: {fileID: 1385938832984776407}
   m_Layer: 0
-  m_Name: Parachute_Guy
+  m_Name: Parachute_Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,6 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   fallAngle: 2
+  plusPoints: 1
+  minPoints: 1
 --- !u!212 &8108244850473670934
 SpriteRenderer:
   m_ObjectHideFlags: 0

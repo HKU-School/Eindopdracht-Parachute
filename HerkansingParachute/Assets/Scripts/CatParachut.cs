@@ -1,8 +1,9 @@
 using Enemy;
 using UnityEngine;
 
-public class NormalParachut : Parachutist
+public class CatParachut : Parachutist
 {
+
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

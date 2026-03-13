@@ -21,7 +21,6 @@ namespace ParachutSpawner
             StartCoroutine(SpawnLoop());
         }
 
-        // Coroutine that spawns parachuts after delay 
         private IEnumerator SpawnLoop()
         {
             yield return new WaitForSeconds(3f);

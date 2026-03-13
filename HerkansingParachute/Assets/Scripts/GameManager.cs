@@ -19,14 +19,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void AddPoint()
+    public void AddPoint(int amount)
     {
-        _score++;
+        _score += amount;
     }
 
-    public void RemovePoint()
+    public void RemovePoint(int amount)
     {
-        _score--;
+        _score -= amount;
     }
 
     public int GetScore()

@@ -1176,9 +1176,7 @@ MonoBehaviour:
   parachutes:
   - {fileID: 9117980248770919350, guid: f42637c6faa3a284390f6c059a5ef97d, type: 3}
   - {fileID: 9117980248770919350, guid: f42637c6faa3a284390f6c059a5ef97d, type: 3}
-  - {fileID: 9117980248770919350, guid: f42637c6faa3a284390f6c059a5ef97d, type: 3}
-  - {fileID: 9117980248770919350, guid: f42637c6faa3a284390f6c059a5ef97d, type: 3}
-  - {fileID: 9117980248770919350, guid: f42637c6faa3a284390f6c059a5ef97d, type: 3}
+  - {fileID: 4303799748146471029, guid: d9aaf128942e43f4d8e0c54bb16337fa, type: 3}
   coolDown: 3
   minX: -6.5
   maxX: 6.5
