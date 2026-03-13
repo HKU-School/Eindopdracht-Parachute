@@ -11,7 +11,7 @@ public class NormalParachut : Parachutist
         }
         if (other.CompareTag("Ground"))
         {
-            GameManager.instance.AddPoint();
+            GameManager.instance.RemovePoint();
         }
         else
         {
