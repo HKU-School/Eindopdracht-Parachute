@@ -9,9 +9,7 @@ public class BadParachut : Parachutist
         {
             GameManager.instance.RemovePoint(minPoints);
         }
-        else
-        {
-            base.OnTriggerEnter2D(other);
-        }
+     
+        base.OnTriggerEnter2D(other);
     }
 }

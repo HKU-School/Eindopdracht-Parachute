@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class CatParachut : Parachutist
 {
-
     protected override void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -14,9 +13,7 @@ public class CatParachut : Parachutist
         {
             GameManager.instance.RemovePoint(minPoints);
         }
-        else
-        {
-            base.OnTriggerEnter2D(other);
-        }
+ 
+        base.OnTriggerEnter2D(other);
     }
 }

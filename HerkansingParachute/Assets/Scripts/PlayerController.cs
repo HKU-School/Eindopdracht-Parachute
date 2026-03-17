@@ -5,7 +5,7 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
-        /*What I still need, Heallth score system*/
+        /*What I still need, Heallth system, animations*/
 
         [Header("Player Value")]
         [SerializeField] private float playerSpeed;

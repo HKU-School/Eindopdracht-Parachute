@@ -758,6 +758,7 @@ GameObject:
   - component: {fileID: 760537819}
   - component: {fileID: 760537822}
   - component: {fileID: 760537821}
+  - component: {fileID: 760537825}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -999,6 +1000,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 5
+--- !u!95 &760537825
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760537817}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e73d89a8f590b3b498b98e776aa86cf8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1119414258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,6 +1199,7 @@ MonoBehaviour:
   parachutes:
   - {fileID: 9117980248770919350, guid: f42637c6faa3a284390f6c059a5ef97d, type: 3}
   - {fileID: 9117980248770919350, guid: f42637c6faa3a284390f6c059a5ef97d, type: 3}
+  - {fileID: 9117980248770919350, guid: affc73ddc97b48448bfd38d723a7a46e, type: 3}
   - {fileID: 4303799748146471029, guid: d9aaf128942e43f4d8e0c54bb16337fa, type: 3}
   coolDown: 3
   minX: -6.5
