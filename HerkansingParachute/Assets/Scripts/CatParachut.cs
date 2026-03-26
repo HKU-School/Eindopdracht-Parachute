@@ -12,6 +12,8 @@ public class CatParachut : Parachutist
         if (other.CompareTag("Ground"))
         {
             GameManager.instance.RemovePoint(minPoints);
+
+            // When Cat hits ground Just instance game ove cause how dare you let a cat fall
         }
  
         base.OnTriggerEnter2D(other);
