@@ -1,9 +1,11 @@
 using Enemy;
 using UnityEngine;
 
-public class CatParachut : Parachutist
+public class CatParachut : MonoBehaviour
 {
-    protected override void OnTriggerEnter2D(Collider2D other)
+    [SerializeField] private int plusPoints;
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -11,11 +13,9 @@ public class CatParachut : Parachutist
         }
         if (other.CompareTag("Ground"))
         {
-            GameManager.instance.RemovePoint(minPoints);
+            //GameManager.instance.RemovePoint(minPoints);
 
             // When Cat hits ground Just instance game ove cause how dare you let a cat fall
         }
- 
-        base.OnTriggerEnter2D(other);
     }
 }

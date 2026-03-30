@@ -1,9 +1,11 @@
 using Enemy;
 using UnityEngine;
 
-public class NormalParachut : Parachutist
+public class NormalParachut : MonoBehaviour
 {
-    protected override void OnTriggerEnter2D(Collider2D other)
+    [SerializeField] private int plusPoints;
+    [SerializeField] private int minPoints;
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -13,7 +15,5 @@ public class NormalParachut : Parachutist
         {
             GameManager.instance.RemovePoint(minPoints);
         }
-        
-        base.OnTriggerEnter2D(other);
     }
 }

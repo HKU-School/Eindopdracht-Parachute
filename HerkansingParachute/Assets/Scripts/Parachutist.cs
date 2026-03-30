@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Enemy
 {
-    public abstract class Parachutist : MonoBehaviour
+    public class Parachutist : MonoBehaviour
     {
         private Rigidbody2D _rb;
         private Vector2 _dir;
@@ -10,8 +10,8 @@ namespace Enemy
         [Header("Parachutist Values")]
         [SerializeField] protected float speed;
         [SerializeField] protected float fallAngle;
-        [SerializeField] protected int plusPoints;
-        [SerializeField] protected int minPoints;
+        //[SerializeField] protected int plusPoints;
+        //[SerializeField] protected int minPoints;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
@@ -22,7 +22,7 @@ namespace Enemy
         }
 
         // Update is called once per frame
-        protected virtual void Update()
+        private void Update()
         {
             Move();
         }
@@ -32,7 +32,7 @@ namespace Enemy
             _rb.linearVelocity = _dir * speed;
         }
 
-        protected virtual void OnTriggerEnter2D(Collider2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             // Destroy objects
             if (other.CompareTag("Player") || other.CompareTag("Ground"))

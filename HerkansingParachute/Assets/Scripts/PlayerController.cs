@@ -5,10 +5,13 @@ namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
-        /*What I still need, Heallth system*/
+        /*What I still need, Heallth system, Health vissueal*/
 
         [Header("Player Value")]
         [SerializeField] private float playerSpeed;
+        [SerializeField] private int maxPlayerHealth;
+        
+        private int playerHeath; 
 
         private Rigidbody2D _rb;
         private Vector2 _moveInput;
@@ -20,6 +23,8 @@ namespace Player
         {
             _rb = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
+
+            playerHeath = maxPlayerHealth;
         }
 
         public void OnMove(InputAction.CallbackContext context)
