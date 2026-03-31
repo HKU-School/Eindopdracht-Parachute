@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private int _score; 
 
     public event Action<int> OnScoreChange;
+    public event Action OnParachutMissed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Awake()
@@ -37,5 +38,10 @@ public class GameManager : MonoBehaviour
     public int GetScore()
     {
         return _score;
+    }
+
+    public void ParachutMissed()
+    {
+        OnParachutMissed?.Invoke();
     }
 }

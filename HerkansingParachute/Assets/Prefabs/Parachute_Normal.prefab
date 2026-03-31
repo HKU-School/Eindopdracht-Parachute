@@ -65,6 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plusPoints: 1
   minPoints: 1
+  missedText: {fileID: 2360764128869114119, guid: a6a3e132fd28c054fac1d1a8bec9d4da, type: 3}
 --- !u!212 &8108244850473670934
 SpriteRenderer:
   m_ObjectHideFlags: 0

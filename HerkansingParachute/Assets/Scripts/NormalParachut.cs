@@ -1,4 +1,5 @@
 using Enemy;
+using System.Collections;
 using UnityEngine;
 
 public class NormalParachut : MonoBehaviour
@@ -14,6 +15,10 @@ public class NormalParachut : MonoBehaviour
         if (other.CompareTag("Ground"))
         {
             GameManager.instance.RemovePoint(minPoints);
+            GameManager.instance.ParachutMissed();
         }
     }
+
+   
 }
+
