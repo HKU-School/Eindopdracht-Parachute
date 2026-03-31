@@ -2,7 +2,7 @@ using Enemy;
 using System.Collections;
 using UnityEngine;
 
-public class NormalParachut : MonoBehaviour
+public class GoodParachut : MonoBehaviour
 {
     [SerializeField] private int plusPoints;
     [SerializeField] private int minPoints;

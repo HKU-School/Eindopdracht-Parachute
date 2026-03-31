@@ -1726,7 +1726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 5
-  maxPlayerHealth: 0
+  maxPlayerHealth: 3
 --- !u!95 &760537825
 Animator:
   serializedVersion: 7
