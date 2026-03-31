@@ -10,8 +10,6 @@ namespace Enemy
         [Header("Parachutist Values")]
         [SerializeField] protected float speed;
         [SerializeField] protected float fallAngle;
-        //[SerializeField] protected int plusPoints;
-        //[SerializeField] protected int minPoints;
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()

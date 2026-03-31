@@ -5,6 +5,8 @@ public class ScoreUI : MonoBehaviour
     [Header("Text field")]
     [SerializeField] private TMP_Text textScore;
 
+    [SerializeField] private TMP_Text endScore;
+
     private void Awake()
     {
         textScore.text = "Score: 0";
@@ -23,5 +25,6 @@ public class ScoreUI : MonoBehaviour
     private void UpdateScore(int newScore)
     {
         textScore.text = "Score: " + newScore;
+        endScore.text = "END SCORE: " + newScore;
     }
 }

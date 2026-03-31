@@ -15,6 +15,11 @@ namespace Menu
             Debug.Log("Quit Game");
             Application.Quit();
         }
+
+        public void BackMenu()
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }
 

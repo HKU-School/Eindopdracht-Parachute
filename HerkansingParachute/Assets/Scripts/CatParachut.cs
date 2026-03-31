@@ -13,8 +13,7 @@ public class CatParachut : MonoBehaviour
         }
         if (other.CompareTag("Ground"))
         {
-            //GameManager.instance.RemovePoint(minPoints);
-
+            // Make an link to death screen that is managed with the game manager. 
             // When Cat hits ground Just instance game ove cause how dare you let a cat fall
         }
     }
