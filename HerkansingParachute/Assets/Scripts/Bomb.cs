@@ -9,7 +9,7 @@ public class Bomb : MonoBehaviour
     [SerializeField] private int minPoints;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _rb.linearVelocity = Vector2.down * fallSpeed;
