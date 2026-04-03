@@ -3,8 +3,10 @@ using System.Collections;
 using TMPro;
 public class MissedText : MonoBehaviour
 {
-    [SerializeField] private float popUpTime;
+    [Header("UI and duration")]
     [SerializeField] private GameObject text;
+    [SerializeField] private float popUpTime;
+    
 
     private void Start()
     {
@@ -39,6 +41,7 @@ public class MissedText : MonoBehaviour
         StartCoroutine(MissedPopUp());
     }
 
+    // Show text for short duration
     private IEnumerator MissedPopUp()
     {
         text.SetActive(true);

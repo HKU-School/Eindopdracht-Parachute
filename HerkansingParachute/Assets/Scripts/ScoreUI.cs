@@ -4,7 +4,6 @@ public class ScoreUI : MonoBehaviour
 {
     [Header("Text field")]
     [SerializeField] private TMP_Text textScore;
-
     [SerializeField] private TMP_Text endScore;
 
     private void Awake()

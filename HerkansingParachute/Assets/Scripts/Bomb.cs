@@ -15,11 +15,13 @@ public class Bomb : MonoBehaviour
         _rb.linearVelocity = Vector2.down * fallSpeed;
     }
 
+    // Handles collision with player or ground.
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             GameManager.instance.RemovePoint(minPoints);
+            GameManager.instance.TakeDamage();
             Destroy(gameObject);
         }
         if (other.CompareTag("Ground"))

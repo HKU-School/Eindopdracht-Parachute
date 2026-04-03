@@ -6,7 +6,6 @@ public class BombDropper : MonoBehaviour
     [SerializeField] private GameObject bombPrefab;
     [SerializeField] private float dropTime;
 
-    private int _BombsDrop = 1;
     private float _timer;
 
     // Update is called once per frame
@@ -21,6 +20,7 @@ public class BombDropper : MonoBehaviour
         }
     }
 
+    // Spawns bomb at current position
     private void DropBomb()
     {
         Instantiate(bombPrefab, transform.position, Quaternion.identity);

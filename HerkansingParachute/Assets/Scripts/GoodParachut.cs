@@ -6,6 +6,8 @@ public class GoodParachut : MonoBehaviour
 {
     [SerializeField] private int plusPoints;
     [SerializeField] private int minPoints;
+
+    // Handles collision with Player and Ground
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
