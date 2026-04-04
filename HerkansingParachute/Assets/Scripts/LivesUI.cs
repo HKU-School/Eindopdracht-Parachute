@@ -6,7 +6,7 @@ public class LivesUI : MonoBehaviour
     [Header("Images for lives")]
     [SerializeField] private Image[] hearts;
 
-    private void Start()
+    private void OnEnable()
     {
         GameManager.instance.OnLivesChanged += UpdateLives;
         UpdateLives(GameManager.instance.GetLives());

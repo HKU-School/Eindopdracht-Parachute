@@ -6,19 +6,6 @@ public class MissedText : MonoBehaviour
     [Header("UI and duration")]
     [SerializeField] private GameObject text;
     [SerializeField] private float popUpTime;
-    
-
-    private void Start()
-    {
-        if (GameManager.instance == null)
-        {
-            Debug.LogError("Gamemanager is null aaaa");
-        }
-        else
-        {
-            GameManager.instance.OnParachutMissed += ShowText;
-        }
-    }
 
     private void OnEnable()
     {

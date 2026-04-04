@@ -6,7 +6,7 @@ public class GameOver : MonoBehaviour
     [SerializeField] private GameObject deathScreen;
     [SerializeField] private GameObject gameScreen;
 
-    private void Start()
+    private void OnEnable()
     {
         GameManager.instance.OnGameOver += ShowDeathScreen;
     }
