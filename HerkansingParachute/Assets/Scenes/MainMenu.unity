@@ -339,7 +339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You have 3 lives. You can move with: A D, arrow keys and with the controller
+  m_text: 'You have 3  lives. You can move with: A D, arrow keys and with the controller
     stick. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 230411e6d5b01934594d2d990ed231ff, type: 2}
@@ -481,8 +481,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: When you catch the cat you get 3 points! BUT if you don't its an instand
-    death for you. Cause how dare you not safe the cat! Also if you catch 3 cats
+  m_text: When you catch  the cat you get 3 points! BUT if you don't its an instand
+    death  for you. Cause how dare you not safe  the cat! Also if  you catch 3 cats
     you get 1 life back if its not already full.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 230411e6d5b01934594d2d990ed231ff, type: 2}
@@ -2067,7 +2067,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: For every Parachute you catch you get 1 point. But for every parachute
-    you don't catch you loose a point.
+    you don't catch you  loose a point.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 230411e6d5b01934594d2d990ed231ff, type: 2}
   m_sharedMaterial: {fileID: 8267859752993892295, guid: 230411e6d5b01934594d2d990ed231ff, type: 2}
